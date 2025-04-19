@@ -1,0 +1,268 @@
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+:root {
+    --plum: #8A337A;
+    --mulberry: #B05CA0;
+    --oxford-blue: #0C1B33;
+    --rufus: #A72608;
+    --dark-orange: #F58F29;
+    --magroove-color: #ec6b43;
+}
+
+
+body {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+header {
+    background-color: var(--mulberry);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+
+.navigation__bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.navigation__bar ul li {
+    list-style-type: none;
+}
+.navigation__bar ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.navigation__bar ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.25rem;
+    background-color: #000;
+    top: 1.5rem;
+    left: 0;
+    transition: all .4s ease;
+}
+.navigation__bar ul li a:hover::after {
+    width: 100%;
+}
+
+
+.main__container .main_background_contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/lines-black.png'), linear-gradient(to bottom, #0C1B33, #B05CA0, #2C3E50);
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main_background_contain .backgroound__img img {
+    position: absolute;
+    left: 0;
+    top: 1.25rem;
+    bottom: auto;
+}
+
+.main_background_contain .text_container_mainbg {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; */
+    line-height: 1.5;
+    width: 40rem;
+}
+.text_container_mainbg h1 {
+    font-size: 2.5rem;
+}
+.text_container_mainbg p {
+    font-size: 1rem;
+    color: gainsboro;
+    padding-bottom: 1.25rem;
+}
+.main__container button {
+    background-color: var(--mulberry);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background .4s ease-in-out;
+    color: #fff;
+    font-weight: 600;
+}
+.main__container button:hover {
+    scale: 1.1;
+    background: var(--plum);
+}
+
+.more__info__container {
+    margin-top: 4rem;
+    text-align: center;
+}
+.more__info__container h2 {
+    color: #fff;
+}
+
+.more__info__container .cards__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: flex-start;
+    gap: 2rem;
+    color: #fff;
+    margin: 4rem 2rem;
+    transition: all ease-out;
+}
+
+.more__info__container :where(.box_recommendation, .box_distribution, .box_save) {
+    background-color: var(--plum);
+    width: 25rem;
+    height: 22rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 2rem;
+    text-align: center;
+    transition: .3s ease-out;
+}
+.more__info__container :where(.box_recommendation:hover, .box_distribution:hover, .box_save:hover) {
+    scale: 1.1;
+}
+.cards__info a {
+    text-decoration: none;
+    color: #F58F29;
+    position: relative;
+}
+.cards__info a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.25rem;
+    background-color: #fff;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    transition: all .4s ease-out;
+    /* display: none; */
+}
+.cards__info a:hover::after{
+    /* display: inline; */
+    width: 6rem;
+}
+.cards__info i {
+    font-size: 1.5rem;
+    color: black;
+}
+.box_recommendation img {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+
+.section__distribution_container  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.section__distribution_container img, 
+.about__festeeve__section__container img {
+    width: 42.05rem;
+    height: auto;
+}
+.sect_distribution__description h2,
+.sect_festeeve_desc h2{
+   color: black;
+   font-size: 3rem;
+
+}
+.sect_distribution__description :where(.festees_work_desc, .artist_rights, .artist_payout),
+.sect_festeeve_desc :where(.about_us_sect, .our_services_sect, .about_sigup) {
+    line-height: 1.5;
+    padding: 2rem 0;
+}
+.sect_distribution__description h3, .sect_festeeve_desc h3 {
+    font-size: 1.25rem;
+    color: var(--plum);
+}
+.sect_distribution__description p, .sect_festeeve_desc p {
+    font-size: 1rem;
+}
+
+
+.about__festeeve__section__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.about__festeeve__section__container .sect_festeeve_desc {
+    padding-left: 2rem;
+}
+
+
+footer {
+    background-color: var(--mulberry);
+    margin: 4rem  0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.logo_social_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+.logo_social_links h4, 
+.useful_links h4  {
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+.logo_social_links .social {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    gap: 2rem;
+    padding-top: 1.25rem;
+}
+
+.useful_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.useful_links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
